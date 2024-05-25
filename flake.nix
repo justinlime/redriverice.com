@@ -20,21 +20,15 @@
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            nodejs_20  
+            nodejs_21
+            go
           ];
+          # cd src/site
+          # npm start - Starts a local webserver at port 3000
+          # npm run build - Builds the site into static files
           shellHook = ''
-            cd ./src
-            npm install
-            cd ../..
             clear
             echo "DevShell Activated"
-          '';
-        };
-        webserver = pkgs.mkShell {
-          shellHook = ''
-            cd ./src
-            npm install
-            npm run dev
           '';
         };
       });
