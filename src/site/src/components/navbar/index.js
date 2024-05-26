@@ -1,3 +1,4 @@
+ // for routing check out https://hygraph.com/blog/routing-in-react
 import "./index.css"
 export default function NavBar() {
   return(
@@ -7,10 +8,13 @@ export default function NavBar() {
     </a>
     <ul>
       <li className="active">
-        <a href="/test1">Test1</a>
+        <a href="#">Home</a>
       </li>
       <li>
-        <a href="/test2">Test2</a>
+        <a href="#">FAQ</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
       </li>
     </ul>
   </nav>  
